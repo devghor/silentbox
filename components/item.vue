@@ -1,5 +1,5 @@
 <template>
-    <span class="silentbox-item" :src="src" @click="openSilentBoxOverlay">
+    <span class="silentbox-item" :src="src" @click="openSilentBoxOverlay" :style="{marginBottom: marginBottom}">
         <slot>
             <img :src="getThumnail(src)" :width="thumbnailWidth" :height="thumbnailHeight" />
         </slot>
@@ -35,6 +35,10 @@
             'thumbnailHeight': {
                 type: String,
                 default: '150px'
+            },
+            'marginBottom': {
+                type: String,
+                default: '0px'
             },
             // Hide player controls
             'hideControls': {
