@@ -1,7 +1,7 @@
 <template>
-    <span class="silentbox-item" :src="src" @click="openSilentBoxOverlay" :style="{marginBottom: marginBottom}">
+    <span class="silentbox-item" :src="src" @click="openSilentBoxOverlay">
         <slot>
-            <img :src="getThumnail(src)" :width="thumbnailWidth" :height="thumbnailHeight" />
+            <img :src="getThumnail(src)" :width="thumbnailWidth" :height="thumbnailHeight" :style="{marginBottom: marginBottom}"/>
         </slot>
     </span>
 </template>
